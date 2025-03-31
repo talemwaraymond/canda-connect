@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&A Connect</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: #e7e7e7;
+            color: #ee0e0e;
+        }
+
+        .header .logo h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .header .user-info {
+            text-align: right;
+            color: #ee0e0e;
+        }
+
+        .header .points {
+            font-weight: 500;
+        }
+
+        /* Dashboard Layout */
+        .dashboard {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: hsl(7, 4%, 49%);
+            color: #ffffff;
+            padding: 1rem;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar nav ul li {
+            margin: 1rem 0;
+        }
+
+        .sidebar nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .content {
+            width: 80%;
+            padding: 2rem;
+        }
+
+       .body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f5f5f5;
+}
+
+    header.header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: #e7e7e7;
+        color: #ffffff;
+}
+
+.branch-content {
+    padding: 2rem;
+}
+
+.employee-grid h3 {
+    margin-bottom: 1rem;
+    color: hsl(0, 88%, 47%);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.employee-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.employee-card img {
+    width: 100%;
+    border: 3px solid hsl(2, 100%, 50%); 
+    border-radius: 10px;
+    display: block;
+}
+
+.employee-card h4 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: hsl(209, 74%, 6%);
+}
+
+.employee-card p {
+    margin: 0.3rem 0;
+    color: #555;
+}
+
+.employee-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+footer.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #004d99;
+    color: #ffffff;
+}
+.branch-logo {
+    max-width: 200px; /* Adjust size of the logo */
+    margin-bottom: 5%;
+}
+        
+        footer.footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: hsl(0, 92%, 49%);
+            color: #ffffff;
+
+        }
+        .branch-logo{
+            max-width: 200px;
+            margin-bottom:5%
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="logo.webp" alt="Chicago Logo" class="branch-logo">
+        </div>
+        <div class="user-info">
+            <span> Welcome To C&A Connect</span>
+        </div>
+    </header>
+
+    <div class="dashboard">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">Directors</a></li>
+                    <div class="employee-card">
+                        <img src="carok.jpg" alt="angella">
+                        <h4>Mrs. Ntegeka K.K. Carol</h4>
+                        <p>Managing Director</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="andrew.jpg" alt="angella">
+                        <h4>Mr. Ntegeka Andrew</h4>
+                        <p>Director</p>
+                    </div>
+                    
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <section class="employee-grid">
+                <h3>C&A PHARMACY TEAM</h3>
+                <div class="grid-container">
+                    <div class="employee-card">
+                        <img src="diana.jpg" alt="angella">
+                        <h4>Dr. Amanya Diana</h4>
+                        <p>Head Quality Assurance</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="josephh.jpg" alt="chris">
+                        <h4>Dr. Seguya Joseph</h4>
+                        <p>Head Operations</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="rennet.jpg" alt="Paul">
+                        <h4>Natukunda Rinette</h4>
+                        <p>Accounts Supervisor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="j.jpg" alt="Salim">
+                        <h4>Jane Ajambo</h4>
+                        <p>Asst. Admin Manager</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="ritah.jpg" alt="Jane Doe">
+                        <h4>Nambasa Ritah</h4>
+                        <p>Asst. Stock Taking Supervisor</p>
+                    </div>
+                
+                    <div class="employee-card">
+                        <img src="lubowa.jpg" alt="Jane Doe">
+                        <h4>Robert Lubowa</h4>
+                        <p>Asst. Procurement & Inventory Control Supervisor</p>
+                    </div>
+                
+                    <div class="employee-card">
+                        <img src="Birung.jpg" alt="Jane Doe">
+                        <h4>Birungi Juliet</h4>
+                        <p>Procurement Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="annah.jpg" alt="Jane Doe">
+                        <h4>Natwijuka Annah</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="ceaser.jpg" alt="Jane Doe">
+                        <h4>Kinyera Ceaser</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="celia.jpg" alt="Jane Doe">
+                        <h4>Asiimwe Celia Ntegeka</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="jovia.jpg" alt="Jane Doe">
+                        <h4>Bulyaba Jovia</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="nicholas.jpg" alt="Jane Doe">
+                        <h4>Kalungi Nicholas</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="carolwada.jpg" alt="Jane Doe">
+                        <h4>Carol Wada</h4>
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="muhangi.jpg" alt="Jane Doe">
+                        <h4>Komuhangi Christine</h4>
+                        <p>Asst. Procurement Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="christtinkende.jpg" alt="Jane Doe">
+                        <h4>Tinkendu Christine</h4>
+                        <p>Asst. Customer experience Manager</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="cathy.jpg" alt="Jane Doe">
+                        <h4>Acom Catherine</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="baganda.jpg" alt="Jane Doe">
+                        <h4>Carol Baganda</h4>
+                        <p>Operations Officer-Non-technical</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="nalweyiso.jpg" alt="Jane Doe">
+                        <h4>Nalweyiso Eseza</h4>
+                        <p>Stock Taking Officer-Non-technical</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="chandilu.jpg" alt="Jane Doe">
+                        <h4>Chandiru Julian</h4>
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="immy.jpg" alt="Jane Doe">
+                        <h4>Immaculate Kitinisa</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Namudu.jpg" alt="Jane Doe">
+                        <h4>Namuddu Angella</h4>
+                        <p>Supervisor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="denis.jpg" alt="Jane Doe">
+                        <h4>Amanya Denis</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="musiime.jpg" alt="Jane Doe">
+                        <h4>Musiime Raymond</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="nancy.jpg" alt="Jane Doe">
+                        <h4>Nancy Chebet</h4>
+                        <p>Procurement Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="conald.jpg" alt="Jane Doe">
+                        <h4>Lutwama Conrad</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="elsie.jpg" alt="Jane Doe">
+                        <h4>Nabirye Eresi</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="ken.jpg" alt="Jane Doe">
+                        <h4>Tulihabwe Kenneth</h4>
+                        <p>Purchasing Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="melanie.jpg" alt="Jane Doe">
+                        <h4>Kutegeka Melanie</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Naeem.jpg" alt="Jane Doe">
+                        <h4>Naeem Ahmad Ntuuyo</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="nixon.jpg" alt="Jane Doe">
+                        <h4>Abaho Nixony</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="patrick.jpg" alt="Jane Doe">
+                        <h4>Machokozi Patrick</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="peter.jpg" alt="Jane Doe">
+                        <h4>Ssemugabi Peter</h4>
+                        <p>Procurement Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="monicah.jpg" alt="Jane Doe">
+                        <h4>Nalubega Monicah</h4>
+                        <p>Customer Experience officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="getrude.jpg" alt="Jane Doe">
+                        <h4>Kabahweza Gertrude</h4>
+                        <p>Accounts Asst.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="sharon.jpg" alt="Jane Doe">
+                        <h4>Turumanya Sharon</h4>
+                        <p>Accounts Asst.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="brenda.jpg" alt="Jane Doe">
+                        <h4>Mbabazi Brenda</h4>
+                        <p>Accounts Asst.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="nahabwe.jpg" alt="Jane Doe">
+                        <h4>Nahabwe Eve</h4>
+                        <p>Custoemr Experience</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="donah.jpg" alt="Jane Doe">
+                        <h4>Donah</h4>
+                        <p>Customer Experience Asst.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="barbra.jpg" alt="Jane Doe">
+                        <h4>Apio Babra</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="shillah.jpg" alt="Jane Doe">
+                        <h4>Nabunya Shillah</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="lubega.jpg" alt="Jane Doe">
+                        <h4>Lubega Steven</h4>
+                        <p>Purchasing Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="kayen.jpg" alt="Jane Doe">
+                        <h4>Kayeny Doreen</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="timothy.jpg" alt="Jane Doe">
+                        <h4>Opakrwoth Timothy</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="grace.jpg" alt="Jane Doe">
+                        <h4>Akandwanaho Grace</h4>
+                        <p>Asst. Branch Supervisor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="joel.jpg" alt="Jane Doe">
+                        <h4>Mawanda Joel</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="kimber.jpg" alt="Jane Doe">
+                        <h4>Nakubulwa Kimberly</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="mary.jpg" alt="Jane Doe">
+                        <h4>Nabanjja Mary</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="kato.jpg" alt="Jane Doe">
+                        <h4>Kato Paul</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="rutagira.jpg" alt="Jane Doe">
+                        <h4>Rutagira Filbert</h4>
+                        <p>Operations officer-Technical</p>
+                    </div>
+                    
+                    <div class="employee-card">
+                        <img src="Saliim.jpg" alt="Jane Doe">
+                        <h4>Kalyesubula Saliim</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Lucy.jpg" alt="Jane Doe">
+                        <h4>Namukwaya Lucy</h4>
+                        <p>Cashier </p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Luyiga.jpg" alt="Jane Doe">
+                        <h4>Luyiga Solomy</h4>
+                        <p>Inventory Asst.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nikiza Samuel.jpg" alt="Jane Doe">
+                        <h4>Nikiza Samuel</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nakanwagi molly.jpg" alt="Jane Doe">
+                        <h4>Nakanwagi molly</h4>
+                        <p>Stock Taking Asst. Technical</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Ayera.jpg" alt="Jane Doe">
+                        <h4>Ayera Patricia</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="namanya.jpg" alt="Jane Doe">
+                        <h4>Namanya Patricia</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Naikoba.jpg" alt="Jane Doe">
+                        <h4>Naikoba kate</h4>
+                        <p>Asst.Stock Taking Officer-Technical</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Amito.jpg" alt="Jane Doe">
+                        <h4>Amito Concy</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Stuart.jpg" alt="Jane Doe">
+                        <h4>Tamale Stuart</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Onoria.jpg" alt="Jane Doe">
+                        <h4>Onoria Pius</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Enap Armstrong.jpg" alt="Jane Doe">
+                        <h4>Enap Armstrong</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nakejju.jpg" alt="Jane Doe">
+                        <h4>Nakejju David</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Kamoga Simon.jpg" alt="Jane Doe">
+                        <h4>Kamoga Simon</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Namugerwa Feddy.jpg" alt="Jane Doe">
+                        <h4>Namugerwa Feddy</h4>
+                        <p>Procurement Officer.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Kabasinguzi Jackline.jpg" alt="Jane Doe">
+                        <h4>Kabasinguzi Jackline</h4>
+                        <p>Asst. Procurement officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Opar Maxwel.jpg" alt="Jane Doe">
+                        <h4>Opar Maxwel</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Aweko Alice.jpg" alt="Jane Doe">
+                        <h4>Aweko Alice</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nabulya Immaculate.jpg" alt="Jane Doe">
+                        <h4>Nabulya Immaculate</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Naiga Daphne.jpg" alt="Jane Doe">
+                        <h4>Naiga Daphne</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Mbayo Moses.jpg" alt="Jane Doe">
+                        <h4>Mbayo Moses</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Arinda Bridget.jpg" alt="Jane Doe">
+                        <h4>Arinda Bridget</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Kalungi Esther.jpg" alt="Jane Doe">
+                        <h4>Kalungi Esthery</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Akriat Faith.jpg" alt="Jane Doe">
+                        <h4>Akriat Faith</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nansereko Pearl Turner.jpg" alt="Jane Doe">
+                        <h4>Nansereko Pearl Turner</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Kunihiira Juliet.jpg" alt="Jane Doe">
+                        <h4>Kunihiira Juliet</h4>
+                        <p>Janitor</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Procurement Officer.jpg" alt="Jane Doe">
+                        <h4>Kisawuzi Ritah</h4>
+                        <p>Procurement Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Niwamanya James.jpg" alt="Jane Doe">
+                        <h4>Niwamanya James</h4>
+                        <p>Operations Officer-Technical</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Ayebazibwe Christiana.jpg" alt="Jane Doe">
+                        <h4>Ayebazibwe Christiana</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Lopeyok Peterson.jpg" alt="Jane Doe">
+                        <h4>Lopeyok Peterson</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="pichan.jpg" alt="Jane Doe">
+                        <h4>Pichan Jackline</h4>
+                        <p>cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Namukasa Cynthia.jpg" alt="Jane Doe">
+                        <h4>Namukasa Cynthia</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Mbabazi Jackline.jpg" alt="Jane Doe">
+                        <h4>Mbabazi Jackline</h4>
+                        <p>Asst. Stock Taking Officer</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Lubega Jonah.jpg" alt="Jane Doe">
+                        <h4>Lubega Jonah</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Ogenrwot Samuel Ongiya.jpg" alt="Jane Doe">
+                        <h4>Ogenrwot Samuel Ongiya</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Niagaga Josephine.jpg" alt="Jane Doe">
+                        <h4>Niagaga Josephine</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Mirembe Sheila.jpg" alt="Jane Doe">
+                        <h4>Mirembe Sheila</h4>
+                        <p>Stock Taking Assist.</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nakakande Saudah.jpg" alt="Jane Doe">
+                        <h4>Nakakande Saudah</h4>
+                        <p>Asst. Stock Taking officer-Technical</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Nsangi Aisha.jpg" alt="Jane Doe">
+                        <h4>Nsangi Aisha</h4>
+                        <p>Cashier</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="talemwa.jpg" alt="Jane Doe">
+                        <h4>Talemwa Raymond</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Kash Wilford.jpg" alt="Jane Doe">
+                        <h4>Kashaija Wilford</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Ronald Kafuko.jpg" alt="Jane Doe">
+                        <h4>Buyinza Ronald Kafuko</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="Magezi c.jpg" alt="Jane Doe">
+                        <h4>Magezi Christopher</h4>
+                        <p>Dispenser</p>
+                    </div>
+                    <div class="employee-card">
+                        <img src="charity.jpeg" alt="Jane Doe">
+                        <h4>charity</h4>
+                        <p>Dispenser</p>
+                    </div>
+        
+
+                    <!-- Add more employee cards as needed -->
+                </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 C&A Pharmaceuticals. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const sliderContainer = document.getElementById('slider-container');
+        let currentIndex = 0;
+
+        function rotateSlider() {
+            currentIndex++;
+            if (currentIndex >= sliderContainer.children.length) {
+                currentIndex = 0;
+            }
+            sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        setInterval(rotateSlider, 3000); // Rotate every 3 seconds
+
+        function showBranchDetails(branchName) {
+            alert(`Navigating to details for ${branchName} branch...`);
+            // Logic for showing branch employee profiles goes here
+        }
+
+        function filterEmployees() {
+            const searchBar = document.getElementById('search-bar');
+            const searchTerm = searchBar.value.toLowerCase();
+            console.log(`Filtering employees with term: ${searchTerm}`);
+            // Implement filter logic based on employee database
+        }
+    </script>
+</body>
+</html>
