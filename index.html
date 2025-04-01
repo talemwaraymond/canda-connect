@@ -35,6 +35,14 @@
             text-align: right;
             color: #ee0e0e;
         }
+                @media (max-width: 768px) {
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Two columns for mobile */
+                gap: 1rem;
+            }
+        }
+
 
         .header .points {
             font-weight: 500;
